@@ -13,7 +13,7 @@ jobs:
     uses: mekomsolutions/shared-github-workflow/.github/workflows/maven-build-test.yml@main
     with:
       java-version: "8"
-      maven-phase: "install"
+      maven-phase: "verify"
       maven-args: "-P prod" # Remove -Pvalidator to temporarily bypass validation
       use-secrets: true
     secrets:
