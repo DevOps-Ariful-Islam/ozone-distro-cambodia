@@ -3,7 +3,12 @@ name: Check for dependency changes
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/60 * * * *'
+    - cron: '0 * * * *'
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 
 jobs:
   check-deps:
